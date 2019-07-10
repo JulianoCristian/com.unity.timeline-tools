@@ -1,0 +1,18 @@
+{
+    "name": "com.unity.timelinetools.editor",
+    "references": [
+        "GUID:16beaa69899812340aeef84ecdefbb23",
+        "GUID:f06555f75b070af458a003d92f9efb00"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
