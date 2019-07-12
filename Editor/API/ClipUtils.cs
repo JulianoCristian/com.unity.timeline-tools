@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+using System.Reflection;            // FIXME: Remove all reflection, isolate into TimelineBase.cs
 using UnityEditor;
-using UnityEngine;
 using UnityEngine.Timeline;
 
 namespace Unity.TimelineTools.API

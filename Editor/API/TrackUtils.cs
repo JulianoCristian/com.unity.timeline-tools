@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Reflection;
+using System.Reflection;                    // FIXME: Remove all reflection, isolate into TimelineBase.cs
 using Unity.TimelineTools.Enumerations;
 using UnityEngine;
 using UnityEngine.Playables;

@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+﻿using System.Reflection;            // FIXME: Remove all reflection, isolate into TimelineBase.cs
 using UnityEditor;
 using UnityEditor.Timeline;
 using UnityEngine;

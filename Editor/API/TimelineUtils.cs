@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Linq;
 using System.Diagnostics;
-using System.Reflection;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Timeline;
-using UnityEngine.Playables;
+using Unity.TimelineTools.API;
 using UnityEditor;
 using UnityEditor.Timeline;
-using Unity.TimelineTools.API;
+using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 namespace Unity.TimelineTools.Utilities
 {
-    
+
     public static class TimelineUtils
     {
         /// <summary>

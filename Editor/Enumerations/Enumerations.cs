@@ -1,8 +1,5 @@
-﻿
-
-namespace Unity.TimelineTools.Enumerations
+﻿namespace Unity.TimelineTools.Enumerations
 {
-
     public enum ClipSelection
     {
         None,
