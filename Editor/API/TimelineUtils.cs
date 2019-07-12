@@ -14,8 +14,6 @@ namespace Unity.TimelineTools.API
         /// <summary>
         /// Creates a Timeline asset at the given path. The path must exist in advance
         /// </summary>
-        /// <param name="timelineAssetPath"></param>
-        /// <returns></returns>
         public static TimelineAsset CreateTimelineAssetAtPath(string timelineAssetPath)
         {
             var timeline_asset = ScriptableObject.CreateInstance<TimelineAsset>();
@@ -28,8 +26,6 @@ namespace Unity.TimelineTools.API
         /// <summary>
         /// Generate a new Timeline asset with the given name in the 'Assets/Timeline' folder of the project
         /// </summary>
-        /// <param name="timelineAssetName"></param>
-        /// <returns></returns>
         public static TimelineAsset CreateTimelineAsset(string timelineAssetName)
         {
             if (!AssetDatabase.IsValidFolder("Assets/Timeline"))
@@ -48,20 +44,19 @@ namespace Unity.TimelineTools.API
             return gameObj;
         }
 
-        public static PlayableDirector SetPlayableAsset(GameObject go, TimelineAsset asset)
+        public static TimelineAsset GetTimelineAssetFromDirector(PlayableDirector director)
         {
-            var dir = go.GetComponent<PlayableDirector>();
-            dir.playableAsset = asset;
-
-            return dir;
+            if (director == null)
+                return null;
+            return director.playableAsset as TimelineAsset;
         }
-   
+
         public static TimelineAsset GetCurrentActiveTimeline()
         {
             return TimelineEditor.inspectedAsset;
         }
 
-        public static void SetTimeline(TimelineAsset timeline, PlayableDirector director)
+        public static void SetActiveTimeline(TimelineAsset timeline, PlayableDirector director)
         {
             var window = TimelineBase.timelineWindow;
 
@@ -79,11 +74,12 @@ namespace Unity.TimelineTools.API
             return director;
         }
 
-        public static TimelineAsset GetTimelineAssetFromDirector(PlayableDirector director)
+        public static PlayableDirector SetPlayableAsset(GameObject go, TimelineAsset asset)
         {
-            if (director == null)
-                return null;
-            return director.playableAsset as TimelineAsset;
+            var dir = go.GetComponent<PlayableDirector>();
+            dir.playableAsset = asset;
+
+            return dir;
         }
 
         public static void SetPlayheadByFrame(PlayableDirector director, float fps, double gotoFrame)
@@ -103,7 +99,7 @@ namespace Unity.TimelineTools.API
             Verify(retVal);
         }
 
-        public static void Verify(System.Object obj)
+        private static void Verify(System.Object obj)
         {
             if (obj != null)
             {

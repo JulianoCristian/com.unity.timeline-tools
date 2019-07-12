@@ -16,7 +16,6 @@ namespace Unity.TimelineTools.API
             return trackProp.GetValue(clip, null) as TrackAsset;
         }
 
-
         public static void Reorder_B_below_A(List<TrackAsset> tracks, TrackAsset a, TrackAsset b)
         {
             var a_idx = tracks.IndexOf(a);
@@ -34,7 +33,6 @@ namespace Unity.TimelineTools.API
 
             tracks[b_idx] = tmp;
         }
-
 
         /// <summary>
         /// pass in a track and we'll try and figure out what type it is

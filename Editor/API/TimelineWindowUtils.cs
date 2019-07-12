@@ -14,7 +14,7 @@ namespace Unity.TimelineTools.API
         {
             EditorApplication.ExecuteMenuItem("Window/Sequencing/Timeline");
 
-            var timelineWindowType = Assembly.Load("UnityEditor.Timeline").GetType("UnityEditor.Timeline.TimelineWindow");
+            var timelineWindowType = TimelineBase.timelineWindow;
 
             // Assuming there always only one timeline window
             var timeline_window = Resources.FindObjectsOfTypeAll(timelineWindowType)[0] as EditorWindow;

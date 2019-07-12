@@ -7,7 +7,6 @@ using UnityEngine.Timeline;
 
 namespace Unity.TimelineTools.API
 {
-
     public static class ClipUtils
     {
         public static TimelineClip GetClipForAsset(TimelineAsset timelineAsset, UnityEngine.Object playableAsset)
@@ -172,8 +171,6 @@ namespace Unity.TimelineTools.API
             }
             TimelineWindowUtils.GetWindow().Repaint();
         }
-
-
 
         public static void SnapToNext(UnityEngine.Object[] objects)
         {
