@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
-using Unity.TimelineTools.API;
 using UnityEditor;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-namespace Unity.TimelineTools.Utilities
+namespace Unity.TimelineTools.API
 {
 
     public static class TimelineUtils
