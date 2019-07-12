@@ -139,7 +139,7 @@ namespace Unity.TimelineTools.API
 
         public static void SnapToPrevious(UnityEngine.Object[] objects)
         {
-            Undo.RecordObjects(objects, "Snap To Previous's End");
+            Undo.RecordObjects(objects, "Snap To Previous");
             List<TimelineClip> selectedClips = new List<TimelineClip>();
             for (int i = 0; i < objects.Length; i++)
             {
@@ -174,7 +174,7 @@ namespace Unity.TimelineTools.API
 
         public static void SnapToNext(UnityEngine.Object[] objects)
         {
-            Undo.RecordObjects(objects, "Snap To Next's Start");
+            Undo.RecordObjects(objects, "Snap To Next");
             List<TimelineClip> selectedClips = new List<TimelineClip>();
             for (int i = 0; i < objects.Length; i++)
             {

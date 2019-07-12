@@ -8,13 +8,13 @@ namespace Unity.TimelineTools.Menu
 {
     public class TimelineEditorWindowsMenu
     {
-        [MenuItem("Tools/Timeline/Animation Import Manager")]
+        [MenuItem("Window/Sequencing/Animation Import Manager")]
         static void AnimationImportWindowMenu()
         {
             AnimationImportWindow.ShowWindow();
         }
 
-        [MenuItem("Tools/Timeline/Replace Animation Clip")]
+        [MenuItem("Window/Sequencing/Replace Animation Clip")]
         static void ReplaceAnimClipWindowMenu()
         {
             //ReplaceAnimClipEditor.ShowWindow();
@@ -33,29 +33,31 @@ namespace Unity.TimelineTools.Menu
 
     public class TimelineAlignmentToolsMenu
     {
+        private const int defaultMenuPriority = 10;
+
         [Shortcut("Timeline/Align Selected Clips to Head", KeyCode.UpArrow, ShortcutModifiers.Alt)]
-        [MenuItem("Edit/Align 'selected Clips' to Head")]
+        [MenuItem("Edit/Align/Align 'selected Clips' to Head", false, defaultMenuPriority)]
         static void AlignToHead()
         {
             ClipUtils.AlignClipsToHead(Selection.objects);
         }
 
         [Shortcut("Timeline/Align Selected Clips to Tail", KeyCode.DownArrow, ShortcutModifiers.Alt)]
-        [MenuItem("Edit/Align 'selected Clips' to Tail")]
+        [MenuItem("Edit/Align/Align 'selected Clips' to Tail", false, defaultMenuPriority)]
         static void AlignToTail()
         {
             ClipUtils.AlignClipsToTail(Selection.objects);
         }
 
         [Shortcut("Timeline/Snap to Previous Clip", KeyCode.LeftArrow, ShortcutModifiers.Alt)]
-        [MenuItem("Edit/Snap to Previous Clip")]
+        [MenuItem("Edit/Snap/Snap to Previous Clip", false, defaultMenuPriority)]
         static void SnapToPrevious()
         {
             ClipUtils.SnapToPrevious(Selection.objects);
         }
 
         [Shortcut("Timeline/Snap to Next Clip", KeyCode.RightArrow, ShortcutModifiers.Alt)]
-        [MenuItem("Edit/Snap to Next Clip")]
+        [MenuItem("Edit/Snap/Snap to Next Clip", false, defaultMenuPriority)]
         static void SnapToNext()
         {
             ClipUtils.SnapToNext(Selection.objects);
