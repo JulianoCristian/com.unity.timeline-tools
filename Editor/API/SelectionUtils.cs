@@ -10,7 +10,7 @@ using UnityEngine.Timeline;
 namespace Unity.TimelineTools.API
 {
 
-    public static class ClipSelector
+    public static class SelectionUtils
     {
         public static IEnumerable<TrackAsset> GetSelectedTracks()
         {
