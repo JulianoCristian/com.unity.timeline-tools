@@ -10,6 +10,6 @@
     "Animation"
   ],
   "dependencies": {
-    "com.unity.timeline": ""
+    "com.unity.timeline": "1.0.0"
   }
 }
