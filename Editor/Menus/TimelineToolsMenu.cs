@@ -1,5 +1,5 @@
 ﻿using Unity.TimelineTools.API;
-using Unity.TimelineTools.Windows;
+//using Unity.TimelineTools.Windows;
 using UnityEditor;
 using UnityEditor.ShortcutManagement;
 using UnityEngine;
@@ -11,7 +11,7 @@ namespace Unity.TimelineTools.Menu
         [MenuItem("Window/Sequencing/Animation Import Manager")]
         static void AnimationImportWindowMenu()
         {
-            AnimationImportWindow.ShowWindow();
+            //AnimationImportWindow.ShowWindow();
         }
 
         [MenuItem("Window/Sequencing/Replace Animation Clip")]
